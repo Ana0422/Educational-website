@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EduIdea Assignment for JobFreak</title>
+    <style>
+        body,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .container {
+            display: flex;
+            height: 200vh;
+        }
+
+
+        .left-panel {
+
+            background-color: burlywood;
+            padding: 10px;
+
+        }
+
+        .left-panel ul {
+            list-style-type: none
+        }
+
+        .left-panel li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            text-decoration: underline;
+            background-color: whitesmoke;
+            font-style: italic;
+            font-weight: bold;
+
+        }
+
+
+        .right-panel {
+            flex: 1;
+            background-color: skyblue;
+            padding: 10px;
+            text-align: justify;
+            text-justify: inter-word;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .right-panel h2 {
+            margin-bottom: 5px;
+            font-style: italic;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <ul>
+                <li onclick="showContent('home')">Home</li>
+                <li onclick="showContent('contact')">Contact</li>
+                <li onclick="showContent('information')">Information</li>
+                <li onclick="showContent('guide')">Guide</li>
+            </ul>
+        </div>
+        <div class="right-panel" id="content">
+            <h2>Welcome to EduIdea!</h2>
+            <p>EduIdea is an educational platform for the students who can't travel to the city for their education.</p>
+            <img src="background.jpg" , width="1100px" , height="500px">
+        </div>
+    </div>
+
+    <script>
+        function showContent(section) {
+            var contentDiv = document.getElementById('content');
+
+            if (section === 'home') {
+                contentDiv.innerHTML = `
+          <h2>Home</h2>
+          <p>
+"Unlock Your Potential Through Education"
+
+
+"At EduIdea, we believe that education is the key to success. Our platform provides comprehensive learning resources and expert guidance to help you achieve your academic goals, enhance your skills, and excel in your chosen field."
+
+
+"Get Started Today!"
+
+Features or Services Overview:
+
+Extensive Course Library: Access a wide range of courses covering various subjects and disciplines.
+Interactive Learning Materials: Engage with interactive lessons, videos, quizzes, and assignments.
+Expert Instructors: Learn from experienced instructors who are experts in their fields.
+Personalized Learning Paths: Tailor your learning experience to meet your unique needs and interests.
+Progress Tracking: Keep track of your progress and achievements as you advance through the courses.
+Supportive Community: Connect with fellow learners, join discussion forums, and collaborate on projects.
+
+Testimonials
+
+"I've learned so much from the courses offered on EduIdea. The instructors are knowledgeable and the content is well-structured." - Ananya Shrishti
+
+"I highly recommend EduIdea for anyone looking to enhance their skills. The courses are engaging and the platform is user-friendly." - Abhijeet Kumar</p>
+        `;
+            } else if (section === 'contact') {
+                contentDiv.innerHTML = `
+          <h2>Contact</h2>
+          <p>Contact information goes here. [Contact Information]
+Phone: 9867568802
+Email: eduidea04@gmail.com
+
+Social Media Links
+Follow us on:
+
+Facebook: eduIdea@fb.com
+Twitter: eduIdea.twitter.com
+Instagram:@eduIdea04
+</p>
+        `;
+            } else if (section === 'information') {
+                contentDiv.innerHTML = `
+          <h2>Information</h2>
+          <p> 
+At EduIdea, our mission is to make quality education accessible to everyone. 
+We believe that learning should be enjoyable, practical, and flexible. 
+With a team of dedicated educators and industry professionals, we strive to create an engaging learning environment that empowers individuals to reach their full potential.</p>
+        `;
+            } else if (section === 'guide') {
+                contentDiv.innerHTML = `
+          <h2>Guide</h2>
+          <p> "Ultimate Guide to EduIdea Topics"
+
+Introduction
+Welcome to the ultimate guide to topics. Whether you're a beginner looking to learn the basics or an experienced enthusiast seeking advanced tips and techniques, this comprehensive guide has got you covered. Dive in and explore everything you need to know about topic.
+
+Table of Contents
+
+Chapter 1: Introduction to Topic
+Overview
+Importance and Benefits
+
+Chapter 2: Getting Started
+Preparing for Topic
+Essential Tools and Equipment
+
+Chapter 3: Fundamentals of Topic
+Key Concepts and Terminology
+Step-by-Step Instructions
+
+Chapter 4: Advanced Techniques
+Mastering Topic Skills
+Tips for Fine-Tuning
+
+Chapter 5: Topic in Practice
+Real-World Applications
+Industry Insights and Trends
+
+Chapter 6: Resources and Further Learning
+Recommended Books and Publications
+Online Courses and Tutorials
+
+
+Congratulations! You've reached the end of the ultimate guide to topic. 
+We hope this comprehensive resource has equipped you with the knowledge and skills needed to excel in topic. 
+Remember, learning is a continuous journey, so keep exploring, practicing, and expanding your expertise.
+
+Ready to put your knowledge into action? Check out our service that can further enhance your educational experience.
+Don't miss out on taking your educational skills to the next level!
+
+
+</p>
+        `;
+            }
+        }
+    </script>
+</body>
+
+</html>
